@@ -5,8 +5,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainController {
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-		HelloWorldController obj = (HelloWorldController) context.getBean("helloWorld");
+		HelloWorldController obj = new HelloWorldController();
+		obj.setMessage("Hi dev!");
 		obj.getMessage();
 	}
 }
